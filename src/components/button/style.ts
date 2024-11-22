@@ -21,6 +21,7 @@ export const styles = css`
         background: transparent;
         font-size: 12px;
         -webkit-tap-highlight-color: transparent;
+        user-select: none;
 
         &:active {
             scale: .85;

@@ -15,6 +15,7 @@ export const styles = css`
         -webkit-backdrop-filter: blur(12px);
         backdrop-filter: blur(12px);
         scale: 1;
+        opacity: 1;
     }
 
     .day-menu::before {
@@ -27,6 +28,31 @@ export const styles = css`
         width: 100%;
         height: 100%;
         background-color: rgba(var(--dayui-color-primary-container), .2);
+    }
+
+    [shadowed] {
+        box-shadow: 0 0 16px -8px rgba(var(--dayui-color-shadow));
+    }
+    
+    [position=top-left]{
+        transform-origin: 0 0;
+    }
+    
+    [position=top-right]{
+        transform-origin: 100% 0;
+    }
+    
+    [position=bottom-left]{
+        transform-origin: 0 100%;
+    }
+    
+    [position=bottom-right]{
+        transform-origin: 100% 100%;
+    }
+    
+    [closed] {
+        scale: .9;
+        opacity: .8;
     }
 `
 
@@ -48,10 +74,12 @@ export const stylesItem = css`
         padding: 8px;
         border-radius: 12px;
         transition: 150ms;
+        user-select: none;
 
         & > span {
             margin: auto;
             margin-left: 0;
+            user-select: none;
         }
 
         .day-menu-item-start {

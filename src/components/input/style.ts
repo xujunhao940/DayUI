@@ -54,11 +54,11 @@ export const styles = css`
         color: rgb(var(--dayui-color-on-surface-variant));
 
         &.focused {
-            border-color: rgb(var(--dayui-color-primary));
+            border-color: rgba(var(--dayui-color-secondary));
         }
 
         &:hover {
-            border-color: rgba(var(--dayui-color-secondary));
+            border-color: rgba(var(--dayui-color-primary));
         }
     }
 `

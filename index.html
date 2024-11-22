@@ -73,7 +73,7 @@
     <h1>Dropdown</h1>
     <day-dropdown>
         <day-button slot="trigger">Open</day-button>
-        <day-menu>
+        <day-menu id="test">
             <day-menu-item>
                 <day-icon slot="startEl">cut</day-icon>
                 <span>Cut</span>
@@ -101,6 +101,39 @@
     <h1>Input</h1>
     <day-input label="outlined" oninput="console.log(event)"></day-input>
     <day-input variant="filled" label="filled"></day-input>
+    <day-input label="disabled" disabled></day-input>
+    <day-input label="readonly" readonly></day-input>
+</div>
+<div>
+    <h1>Select</h1>
+    <day-select label="Select">
+        <day-menu-item value="cut">
+            <day-icon slot="startEl">cut</day-icon>
+            <span>Cut</span>
+            <span slot="endEl">⌘X</span>
+        </day-menu-item>
+        <day-menu-item value="copy">
+            <day-icon slot="startEl">content_copy</day-icon>
+            <span>Copy</span>
+            <span slot="endEl">⌘C</span>
+        </day-menu-item>
+        <day-menu-item value="paste">
+            <day-icon slot="startEl">content_paste</day-icon>
+            <span>Paste</span>
+            <span slot="endEl">⌘V</span>
+        </day-menu-item>
+        <day-menu-divider></day-menu-divider>
+        <day-menu-item value="web clipboard">
+            <day-icon slot="startEl">cloud</day-icon>
+            <span>Web Clipboard</span>
+        </day-menu-item>
+    </day-select>
+</div>
+<div>
+    <h1>Checkbox</h1>
+    <day-checkbox></day-checkbox>
+    <day-checkbox checked></day-checkbox>
+    <day-checkbox indeterminate></day-checkbox>
 </div>
 </body>
 </html>

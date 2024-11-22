@@ -1,8 +1,6 @@
 import {LitElement, html,} from 'lit'
 import {customElement, queryAssignedElements} from 'lit/decorators.js'
-import {provide} from '@lit/context';
-import {dropdownCloseFuncContext} from "../sharing";
-import {styles} from "./style.ts";
+import {styles} from './style.ts'
 
 @customElement('day-dropdown')
 export class Dropdown extends LitElement {
@@ -13,26 +11,59 @@ export class Dropdown extends LitElement {
 
     static styles = styles
 
-    @provide({context: dropdownCloseFuncContext})
-    private _close = () => {
-        this._menuElements[0].style.display = "none"
+    public _close = (delay?: number) => {
+        this._menuElements[0].setAttribute("closed", "true")
+        setTimeout(() => {
+            this._menuElements[0].style.display = "none"
+        }, delay)
+    }
+
+    public _open = () => {
+        this._menuElements[0].style.display = "block"
+        setTimeout(() => {
+            this._menuElements[0].removeAttribute("closed")
+            this._menuElements[0].focus()
+        }, 1)
     }
 
     firstUpdated() {
+        this._menuElements[0].tabIndex = -1
+        this._menuElements[0].setAttribute("shadowed", "true")
         this._triggerElements[0].addEventListener("click", () => {
-            this._menuElements[0].style.display = "block"
+            this._open()
         })
-        this._menuElements[0].addEventListener("blur", () => {
-            this._close()
+        this._menuElements[0].addEventListener("blur", (e) => {
+            if (!this._menuElements[0].contains(e.relatedTarget as Node)) {
+                setTimeout(() => {
+                    this._close(100)
+                }, 100)
+            } else {
+                this._menuElements[0].focus()
+            }
+
         })
+
+
+        this._close(0)
+
+        if (this._menuElements.length > 0) {
+            // @ts-ignore
+            this._menuElements[0]?.items?.forEach(item => {
+                if (item.querySelectorAll("day-menu-item").length <= 0) {
+                    item.addEventListener("click", () => {
+                        this._close(100)
+                    })
+                }
+            })
+        }
     }
 
     render() {
         return html`
             <div class="day-dropdown-container">
                 <slot name="trigger"></slot>
-                <div>
-                    <div>
+                <div class="day-dropdown-position-origin">
+                    <div class="day-dropdown-position-container">
                         <slot></slot>
                     </div>
                 </div>

@@ -15,6 +15,8 @@ export class Icon extends LitElement {
                 }
 
                 span {
+                    -webkit-user-select: none;
+                    user-select: none;
                     font-size: ${this.size}px;
                 }
             </style>

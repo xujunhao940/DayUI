@@ -8,18 +8,41 @@ export class Input extends LitElement {
     @property({type: String})
     public label: string = "Input"
 
+    @property({type: Number})
+    public tabIndex: number = 0
+
     @property({type: String})
-    public variant: "filled"|"outlined" = "outlined"
+    public variant: "filled" | "outlined" = "outlined"
+
+    @property({type: String})
+    public type: "text" | "number" | "password" | "email" | "date" | "time" | "datetime-local" | "month" | "week" | "search" | "tel" | "url" = "text"
+
+    @property({type: String})
+    public value: string = ""
+
+    @property({type: Boolean})
+    public disabled: boolean = false
+
+    @property({type: Boolean})
+    public readonly: boolean = false
 
     public inputRef: Ref<HTMLInputElement> = createRef();
 
     static styles = styles
 
     render() {
+        const input = this.inputRef.value
+        // @ts-ignore
+        input?.parentElement?.classList.remove("filled")
+        // @ts-ignore
+        if (this.value.length > 0) input?.parentElement?.classList.add("filled")
+
         return html`
             <div class=${`day-input-container variant-${this.variant}`}>
                 <span class="day-input-label">${this.label}</span>
-                <input class="day-input" ${ref(this.inputRef)}/>
+                <input class="day-input" ${ref(this.inputRef)} tabindex=${this.tabIndex} ?disabled=${this.disabled}
+                       ?readonly=${this.readonly}
+                       type=${this.type} value=${this.value}/>
             </div>
         `
     }
