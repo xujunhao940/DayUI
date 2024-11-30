@@ -33,23 +33,23 @@ export const styles = css`
     [shadowed] {
         box-shadow: 0 0 16px -8px rgba(var(--dayui-color-shadow));
     }
-    
-    [position=top-left]{
+
+    [position=top-left] {
         transform-origin: 0 0;
     }
-    
-    [position=top-right]{
+
+    [position=top-right] {
         transform-origin: 100% 0;
     }
-    
-    [position=bottom-left]{
+
+    [position=bottom-left] {
         transform-origin: 0 100%;
     }
-    
-    [position=bottom-right]{
+
+    [position=bottom-right] {
         transform-origin: 100% 100%;
     }
-    
+
     [closed] {
         scale: .9;
         opacity: .8;
@@ -75,6 +75,12 @@ export const stylesItem = css`
         border-radius: 12px;
         transition: 150ms;
         user-select: none;
+        tab-index: -1;
+
+        & > * {
+            touch-action: none;
+            pointer-events: none;
+        }
 
         & > span {
             margin: auto;

@@ -1,6 +1,7 @@
 import {css} from "lit";
 
 export const styles = css`
+    
     .day-checkbox-container {
         display: inline-flex;
         position: relative;
@@ -9,13 +10,23 @@ export const styles = css`
         transition: 100ms;
         scale: 1;
         border-radius: 4px;
-
-        &:hover {
-            background: rgba(var(--dayui-color-primary-container), .7);
+        
+        &[disabled] .day-checkbox-icon{
+            fill: rgba(var(--dayui-color-outline));
         }
 
-        &:active {
-            scale: .8;
+        &:not([disabled]) {
+            &:focus-visible {
+                outline: 2px solid rgba(var(--dayui-color-primary), .8);
+            }
+            
+            &:hover {
+                background: rgba(var(--dayui-color-primary-container), .4);
+            }
+
+            &:active {
+                scale: .8;
+            }
         }
     }
 
@@ -33,9 +44,11 @@ export const styles = css`
         opacity: 0;
         transform-origin: 50% 50%;
 
-        &[selected] {
-            opacity: 1;
-            scale: 1;
+        &:not([disabled]) {
+            &[selected] {
+                opacity: 1;
+                scale: 1;
+            }
         }
     }
 `

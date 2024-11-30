@@ -2,11 +2,17 @@ import {LitElement, html} from 'lit'
 import {customElement, property} from 'lit/decorators.js'
 import {styles} from './style.ts'
 import {ref, Ref, createRef} from 'lit/directives/ref.js';
+import {userSelectNone} from "../share/style.ts";
+
 
 @customElement('day-checkbox')
 export class Checkbox extends LitElement {
-    static styles = styles
+    static styles = [styles, userSelectNone]
 
+    @property({type: String})
+    public name: string = ""
+    @property({type: Boolean})
+    public disabled: boolean = false
     @property({type: Boolean})
     public checked: boolean = false
     @property({type: Boolean})
@@ -15,6 +21,7 @@ export class Checkbox extends LitElement {
     public inputRef: Ref<HTMLInputElement> = createRef();
 
     private _handleClick() {
+        if (this.disabled) return;
         if (this.indeterminate) {
             this.indeterminate = false;
             this.checked = true;
@@ -36,17 +43,18 @@ export class Checkbox extends LitElement {
 
     firstUpdated() {
         this.inputRef.value?.addEventListener("change", () => {
-            this.checked = this.inputRef.value?.checked ?? false
+            if (!this.disabled) this.checked = this.inputRef.value?.checked ?? false
         })
     }
 
     render() {
         return html`
-            <div class="day-checkbox-container" tabindex="1" @keydown=${(e: { keyCode: number; }) => {
-                if (e.keyCode == 9) return;
-                this._handleClick()
-            }}>
-                <input type="checkbox" class="day-checkbox-input" ${ref(this.inputRef)}>
+            <div class="day-checkbox-container" tabindex=${this.disabled ? "-1" : "0"} ?disabled=${this.disabled}
+                 @keydown=${(e: KeyboardEvent) => {
+                     if (e.key === 'Enter' || e.key === ' ') this._handleClick()
+                 }}>
+                <input type="checkbox" class="day-checkbox-input" ${ref(this.inputRef)} ?disabled=${this.disabled}
+                       name=${this.name}>
                 <div @click=${this._handleClick}>
                     <svg xmlns="http://www.w3.org/2000/svg" class="day-checkbox-icon unchecked" viewBox="0 0 24 24">
                         <path d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"></path>

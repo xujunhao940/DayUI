@@ -1,10 +1,18 @@
 import {LitElement, html,} from 'lit'
 import {customElement, property, queryAssignedElements} from 'lit/decorators.js'
+import {userSelectNone} from "../share/style.ts";
 
 @customElement('day-select')
 export class Select extends LitElement {
+    static styles = userSelectNone
+
+
+    @property({type: String})
+    public name: string = ""
     @property({type: String})
     label: string = ""
+    @property({type: Boolean})
+    disabled: boolean = false
 
     @queryAssignedElements()
     private _menuElements!: Array<HTMLElement>;
@@ -15,8 +23,6 @@ export class Select extends LitElement {
         this._menuElements.forEach(element => {
             element.onclick = () => {
                 // @ts-ignore
-                console.log("click", element, element.value)
-                // @ts-ignore
                 this.value = element.value
                 this.requestUpdate()
             }
@@ -26,8 +32,11 @@ export class Select extends LitElement {
     render() {
         return html`
             <div class="day-select-container">
-                <day-dropdown>
-                    <day-input label=${this.label} value=${this.value} slot="trigger" tabIndex="0" readonly @focus=${(e: { target: { click: () => void; }; })=>{e.target.click()}}></day-input>
+                <day-dropdown ?disabled=${this.disabled}>
+                    <day-input label=${this.label} value=${this.value} slot="trigger" tabIndex="0" readonly
+                               @focus=${(e: { target: { click: () => void; }; }) => {
+                                   e.target.click()
+                               }} ?disabled=${this.disabled} name=${this.name}></day-input>
                     <day-menu>
                         <slot></slot>
                     </day-menu>

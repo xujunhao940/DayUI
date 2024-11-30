@@ -1,15 +1,21 @@
 import {LitElement, html,} from 'lit'
-import {customElement, queryAssignedElements} from 'lit/decorators.js'
+import {customElement, property, queryAssignedElements} from 'lit/decorators.js'
 import {styles} from './style.ts'
+import {userSelectNone} from "../share/style.ts";
 
 @customElement('day-dropdown')
 export class Dropdown extends LitElement {
+    @property({type: Boolean})
+    disabled: boolean = false
+
     @queryAssignedElements({slot: 'trigger'})
     private _triggerElements!: Array<HTMLElement>;
     @queryAssignedElements()
     private _menuElements!: Array<HTMLElement>;
 
-    static styles = styles
+    static styles = [styles,userSelectNone]
+
+    public itemsArr: Array<HTMLElement> = []
 
     public _close = (delay?: number) => {
         this._menuElements[0].setAttribute("closed", "true")
@@ -19,10 +25,14 @@ export class Dropdown extends LitElement {
     }
 
     public _open = () => {
+        if(this.disabled){
+            return
+        }
         this._menuElements[0].style.display = "block"
         setTimeout(() => {
             this._menuElements[0].removeAttribute("closed")
-            this._menuElements[0].focus()
+            // @ts-ignore
+            this.itemsArr[0].buttonRef.value.focus()
         }, 1)
     }
 
@@ -32,30 +42,35 @@ export class Dropdown extends LitElement {
         this._triggerElements[0].addEventListener("click", () => {
             this._open()
         })
-        this._menuElements[0].addEventListener("blur", (e) => {
-            if (!this._menuElements[0].contains(e.relatedTarget as Node)) {
-                setTimeout(() => {
-                    this._close(100)
-                }, 100)
-            } else {
-                this._menuElements[0].focus()
-            }
+        if (this._menuElements[0].children[0].tagName === "SLOT") {
+            // @ts-ignore
+            this.itemsArr = this._menuElements[0].children[0].assignedElements();
+        } else {
+            // @ts-ignore
+            this.itemsArr = Array.from(this._menuElements[0].children);
+        }
+        // @ts-ignore
+        this.itemsArr.forEach(item => {
+            // @ts-ignore
+            item.shadowRoot?.querySelector(".day-menu-item")?.addEventListener("blur", (e) => {
+                // @ts-ignore
+                if (this.itemsArr.indexOf(e.relatedTarget as Node) === -1) {
+                    setTimeout(() => {
+                        this._close(100)
+                    }, 100)
+                }
+            })
 
+            // @ts-ignore
+            if (item.shadowRoot.querySelectorAll("day-menu-item").length <= 0) {
+                item.addEventListener("click", () => {
+                    this._close(100)
+                })
+            }
         })
 
 
         this._close(0)
-
-        if (this._menuElements.length > 0) {
-            // @ts-ignore
-            this._menuElements[0]?.items?.forEach(item => {
-                if (item.querySelectorAll("day-menu-item").length <= 0) {
-                    item.addEventListener("click", () => {
-                        this._close(100)
-                    })
-                }
-            })
-        }
     }
 
     render() {
