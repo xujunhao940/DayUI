@@ -2,6 +2,7 @@ import {css} from "lit"
 
 
 export const styles = css`
+    
     .day-dropdown-position-origin{
         position: relative;
     }

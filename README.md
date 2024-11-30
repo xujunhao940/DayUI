@@ -5,8 +5,8 @@ UI components using <strong>Web Components</strong>
 
 ```html
 <head>
-    <script src="/dist/dayui/index.js"></script>
-    <link rel="stylesheet" href="/dist/dayui/index.css">
+    <script src="/dist/assets/index.js"></script>
+    <link rel="stylesheet" href="/dist/assets/index.css">
 </head>
 <body>
 <day-button>Button</day-button>

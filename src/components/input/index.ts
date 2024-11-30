@@ -2,9 +2,13 @@ import {LitElement, html} from 'lit'
 import {customElement, property} from 'lit/decorators.js'
 import {ref, Ref, createRef} from 'lit/directives/ref.js';
 import {styles} from "./style.ts";
+import {userSelectNone} from "../share/style.ts";
 
 @customElement('day-input')
 export class Input extends LitElement {
+    @property({type: String})
+    public name: string = ""
+
     @property({type: String})
     public label: string = "Input"
 
@@ -28,7 +32,7 @@ export class Input extends LitElement {
 
     public inputRef: Ref<HTMLInputElement> = createRef();
 
-    static styles = styles
+    static styles = [styles, userSelectNone]
 
     render() {
         const input = this.inputRef.value
@@ -41,7 +45,7 @@ export class Input extends LitElement {
             <div class=${`day-input-container variant-${this.variant}`}>
                 <span class="day-input-label">${this.label}</span>
                 <input class="day-input" ${ref(this.inputRef)} tabindex=${this.tabIndex} ?disabled=${this.disabled}
-                       ?readonly=${this.readonly}
+                       ?readonly=${this.readonly} name=${this.name}
                        type=${this.type} value=${this.value}/>
             </div>
         `

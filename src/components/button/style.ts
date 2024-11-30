@@ -23,12 +23,12 @@ export const styles = css`
         -webkit-tap-highlight-color: transparent;
         user-select: none;
 
-        &:active {
-            scale: .85;
-        }
-
         &:focus-visible {
             outline: 2px solid rgba(var(--dayui-color-primary), .8);
+        }
+
+        &:active {
+            scale: .85;
         }
 
         &[variant=filled] {
@@ -71,15 +71,15 @@ export const styles = css`
 
         &[disabled] {
             cursor: default;
-            background: rgba(var(--dayui-color-inverse-surface),.2);
-            
-            &:active{
+            background: rgba(var(--dayui-color-inverse-surface), .2);
+
+            &:active {
                 scale: 1;
-                background: rgba(var(--dayui-color-inverse-surface),.2);
+                background: rgba(var(--dayui-color-inverse-surface), .2);
             }
-            
-            &:hover{
-                background: rgba(var(--dayui-color-inverse-surface),.2);
+
+            &:hover {
+                background: rgba(var(--dayui-color-inverse-surface), .2);
             }
         }
     }

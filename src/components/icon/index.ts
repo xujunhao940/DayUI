@@ -14,6 +14,15 @@ export class Icon extends LitElement {
                     height: ${this.size}px;
                 }
 
+                :host,
+                * {
+                    -webkit-tap-highlight-color: transparent;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-user-drag: none;
+                    -webkit-touch-callout: none;
+                }
+
                 span {
                     -webkit-user-select: none;
                     user-select: none;
