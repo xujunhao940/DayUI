@@ -24,8 +24,8 @@ npm install @xujunhao2010/dayui
 ```html
 
 <head>
-    <script src="https://unpkg.com/browse/@xujunhao2010/dayui@1.0.1/dist/assets/index.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/browse/@xujunhao2010/dayui@1.0.1/dist/assets/index.css">
+    <script src="https://unpkg.com/@xujunhao2010/dayui@1.0.1/dist/assets/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/@xujunhao2010/dayui@1.0.1/dist/assets/index.css">
 </head>
 <body>
 <day-button>Button</day-button>
