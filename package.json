@@ -1,7 +1,7 @@
 {
-  "name": "dayui",
+  "name": "@xujunhao2010/dayui",
   "private": false,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "author": "Matthew Xu(许峻豪)(xujunhao2010@gmail.com)",
   "type": "module",
   "scripts": {
