@@ -3,6 +3,7 @@ import {customElement, property, queryAssignedElements} from 'lit/decorators.js'
 import {stylesRadio, stylesRadioGroup} from './style.ts'
 import {provide, consume, createContext} from '@lit/context';
 import {ref, Ref, createRef} from 'lit/directives/ref.js';
+import {userSelectNone} from "../share/style.ts";
 
 
 const context = createContext<string>('radioContext');
@@ -61,7 +62,7 @@ export class Radio extends LitElement {
     @property({type: String})
     public value: string = ""
 
-    static styles = stylesRadio
+    static styles = [stylesRadio, userSelectNone]
 
     public tabindex = -1
 
@@ -102,12 +103,10 @@ export class Radio extends LitElement {
             if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
                 this.focusNext(this)
                 e.preventDefault()
-            }
-            else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+            } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
                 this.focusPrev(this)
                 e.preventDefault()
-            }
-            else if (e.key === 'Enter' || e.key === ' ') {
+            } else if (e.key === 'Enter' || e.key === ' ') {
                 // @ts-ignore
                 this.parentElement.value = this.value
             }
