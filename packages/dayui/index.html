@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>DayUI</title>
+    <link rel="stylesheet" href="/src/index.css"/>
+    <script type="module" src="/src/index.ts"></script>
+</head>
+<body ontouchstart="" onmouseover="">
+<h1>DayUI</h1>
+<div>
+    <h1>Buttons</h1>
+    <day-button>Filled</day-button>
+    <day-button variant="outlined">Outlined</day-button>
+    <day-button variant="text">Text</day-button>
+    <day-button disabled>Disabled</day-button>
+    <h3>Buttons with icons</h3>
+    <day-button>
+        <day-icon slot="startEl">save</day-icon>
+        Save
+    </day-button>
+    <day-button variant="outlined">
+        Send
+        <day-icon slot="endEl">send</day-icon>
+    </day-button>
+    <h3>IconButtons</h3>
+    <day-button-icon>
+        <day-icon>add</day-icon>
+    </day-button-icon>
+    <day-button-icon variant="outlined">
+        <day-icon>add</day-icon>
+    </day-button-icon>
+    <day-button-icon variant="text">
+        <day-icon>add</day-icon>
+    </day-button-icon>
+    <day-button-icon disabled>
+        <day-icon>add</day-icon>
+    </day-button-icon>
+    <h3>ButtonGroups</h3>
+    <day-button-group>
+        <day-button>Filled</day-button>
+        <day-button variant="outlined">Outlined</day-button>
+        <day-button variant="text">Text</day-button>
+        <day-button disabled>Disabled</day-button>
+    </day-button-group>
+</div>
+<div>
+    <h1>Menu</h1>
+    <day-menu>
+        <day-menu-item>
+            <day-icon slot="startEl">cut</day-icon>
+            <span>Cut</span>
+            <span slot="endEl">⌘X</span>
+        </day-menu-item>
+        <day-menu-item>
+            <day-icon slot="startEl">content_copy</day-icon>
+            <span>Copy</span>
+            <span slot="endEl">⌘C</span>
+        </day-menu-item>
+        <day-menu-item>
+            <day-icon slot="startEl">content_paste</day-icon>
+            <span>Paste</span>
+            <span slot="endEl">⌘V</span>
+        </day-menu-item>
+        <day-menu-divider></day-menu-divider>
+        <day-menu-item>
+            <day-icon slot="startEl">cloud</day-icon>
+            <span>Web Clipboard</span>
+        </day-menu-item>
+    </day-menu>
+</div>
+<div>
+    <h1>Dropdown</h1>
+    <day-dropdown>
+        <day-button slot="trigger">Open</day-button>
+        <day-menu id="test">
+            <day-menu-item>
+                <day-icon slot="startEl">cut</day-icon>
+                <span>Cut</span>
+                <span slot="endEl">⌘X</span>
+            </day-menu-item>
+            <day-menu-item>
+                <day-icon slot="startEl">content_copy</day-icon>
+                <span>Copy</span>
+                <span slot="endEl">⌘C</span>
+            </day-menu-item>
+            <day-menu-item>
+                <day-icon slot="startEl">content_paste</day-icon>
+                <span>Paste</span>
+                <span slot="endEl">⌘V</span>
+            </day-menu-item>
+            <day-menu-divider></day-menu-divider>
+            <day-menu-item>
+                <day-icon slot="startEl">cloud</day-icon>
+                <span>Web Clipboard</span>
+            </day-menu-item>
+        </day-menu>
+    </day-dropdown>
+    <day-dropdown disabled>
+        <day-button slot="trigger">Disabled</day-button>
+        <day-menu id="test">
+            <day-menu-item>
+                <day-icon slot="startEl">cut</day-icon>
+                <span>Cut</span>
+                <span slot="endEl">⌘X</span>
+            </day-menu-item>
+            <day-menu-item>
+                <day-icon slot="startEl">content_copy</day-icon>
+                <span>Copy</span>
+                <span slot="endEl">⌘C</span>
+            </day-menu-item>
+            <day-menu-item>
+                <day-icon slot="startEl">content_paste</day-icon>
+                <span>Paste</span>
+                <span slot="endEl">⌘V</span>
+            </day-menu-item>
+            <day-menu-divider></day-menu-divider>
+            <day-menu-item>
+                <day-icon slot="startEl">cloud</day-icon>
+                <span>Web Clipboard</span>
+            </day-menu-item>
+        </day-menu>
+    </day-dropdown>
+</div>
+<div>
+    <h1>Input</h1>
+    <day-input label="outlined" oninput="console.log(event)"></day-input>
+    <day-input variant="filled" label="filled"></day-input>
+    <day-input label="disabled" disabled></day-input>
+    <day-input label="readonly" readonly></day-input>
+</div>
+<div>
+    <h1>Select</h1>
+    <day-select label="Select">
+        <day-menu-item value="cut">
+            <day-icon slot="startEl">cut</day-icon>
+            <span>Cut</span>
+            <span slot="endEl">⌘X</span>
+        </day-menu-item>
+        <day-menu-item value="copy">
+            <day-icon slot="startEl">content_copy</day-icon>
+            <span>Copy</span>
+            <span slot="endEl">⌘C</span>
+        </day-menu-item>
+        <day-menu-item value="paste">
+            <day-icon slot="startEl">content_paste</day-icon>
+            <span>Paste</span>
+            <span slot="endEl">⌘V</span>
+        </day-menu-item>
+        <day-menu-divider></day-menu-divider>
+        <day-menu-item value="web clipboard">
+            <day-icon slot="startEl">cloud</day-icon>
+            <span>Web Clipboard</span>
+        </day-menu-item>
+    </day-select>
+    <day-select label="Disabled" disabled>
+        <day-menu-item value="cut">
+            <day-icon slot="startEl">cut</day-icon>
+            <span>Cut</span>
+            <span slot="endEl">⌘X</span>
+        </day-menu-item>
+        <day-menu-item value="copy">
+            <day-icon slot="startEl">content_copy</day-icon>
+            <span>Copy</span>
+            <span slot="endEl">⌘C</span>
+        </day-menu-item>
+        <day-menu-item value="paste">
+            <day-icon slot="startEl">content_paste</day-icon>
+            <span>Paste</span>
+            <span slot="endEl">⌘V</span>
+        </day-menu-item>
+        <day-menu-divider></day-menu-divider>
+        <day-menu-item value="web clipboard">
+            <day-icon slot="startEl">cloud</day-icon>
+            <span>Web Clipboard</span>
+        </day-menu-item>
+    </day-select>
+</div>
+<div>
+    <h1>Checkbox</h1>
+    <day-checkbox></day-checkbox>
+    <day-checkbox checked></day-checkbox>
+    <day-checkbox indeterminate></day-checkbox>
+    <day-checkbox disabled></day-checkbox>
+    <span>disabled</span>
+</div>
+<div>
+    <h1>Switch</h1>
+    <day-switch></day-switch>
+    <day-switch checked></day-switch>
+    <day-switch disabled></day-switch>
+    <span>disabled</span>
+</div>
+<div>
+    <h1>Radio</h1>
+    <day-radio-group>
+        <day-radio value="female">Female</day-radio>
+        <day-radio value="male">Male</day-radio>
+        <day-radio value="ratherNotSay">Rather not say</day-radio>
+    </day-radio-group>
+</div>
+</body>
+</html>

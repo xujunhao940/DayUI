@@ -1,0 +1,254 @@
+.light {
+    --dayui-color-primary: 101, 85, 143;
+    --dayui-color-surface-tint: 103, 80, 164;
+    --dayui-color-on-primary: 255, 255, 255;
+    --dayui-color-primary-container: 234, 221, 255;
+    --dayui-color-on-primary-container: 33, 0, 93;
+    --dayui-color-secondary: 98, 91, 113;
+    --dayui-color-on-secondary: 255, 255, 255;
+    --dayui-color-secondary-container: 232, 222, 248;
+    --dayui-color-on-secondary-container: 29, 25, 43;
+    --dayui-color-tertiary: 125, 82, 96;
+    --dayui-color-on-tertiary: 255, 255, 255;
+    --dayui-color-tertiary-container: 255, 216, 228;
+    --dayui-color-on-tertiary-container: 49, 17, 29;
+    --dayui-color-error: 179, 38, 30;
+    --dayui-color-on-error: 255, 255, 255;
+    --dayui-color-error-container: 249, 222, 220;
+    --dayui-color-on-error-container: 65, 14, 11;
+    --dayui-color-background: 254, 247, 255;
+    --dayui-color-on-background: 29, 27, 32;
+    --dayui-color-surface: 254, 247, 255;
+    --dayui-color-on-surface: 29, 27, 32;
+    --dayui-color-surface-variant: 231, 224, 236;
+    --dayui-color-on-surface-variant: 73, 69, 79;
+    --dayui-color-outline: 121, 116, 126;
+    --dayui-color-outline-variant: 202, 196, 208;
+    --dayui-color-shadow: 0, 0, 0;
+    --dayui-color-scrim: 0, 0, 0;
+    --dayui-color-inverse-surface: 50, 47, 53;
+    --dayui-color-inverse-on-surface: 245, 239, 247;
+    --dayui-color-inverse-primary: 208, 188, 255;
+    --dayui-color-primary-fixed: 234, 221, 255;
+    --dayui-color-on-primary-fixed: 33, 0, 93;
+    --dayui-color-primary-fixed-dim: 208, 188, 255;
+    --dayui-color-on-primary-fixed-variant: 79, 55, 139;
+    --dayui-color-secondary-fixed: 232, 222, 248;
+    --dayui-color-on-secondary-fixed: 29, 25, 43;
+    --dayui-color-secondary-fixed-dim: 204, 194, 220;
+    --dayui-color-on-secondary-fixed-variant: 74, 68, 88;
+    --dayui-color-tertiary-fixed: 255, 216, 228;
+    --dayui-color-on-tertiary-fixed: 49, 17, 29;
+    --dayui-color-tertiary-fixed-dim: 239, 184, 200;
+    --dayui-color-on-tertiary-fixed-variant: 99, 59, 72;
+    --dayui-color-surface-dim: 222, 216, 225;
+    --dayui-color-surface-bright: 254, 247, 255;
+    --dayui-color-surface-container-lowest: 255, 255, 255;
+    --dayui-color-surface-container-low: 247, 242, 250;
+    --dayui-color-surface-container: 243, 237, 247;
+    --dayui-color-surface-container-high: 236, 230, 240;
+    --dayui-color-surface-container-highest: 230, 224, 233;
+}
+
+.dark {
+    --dayui-color-primary: 208, 188, 254;
+    --dayui-color-surface-tint: 208, 188, 255;
+    --dayui-color-on-primary: 56, 30, 114;
+    --dayui-color-primary-container: 79, 55, 139;
+    --dayui-color-on-primary-container: 234, 221, 255;
+    --dayui-color-secondary: 204, 194, 220;
+    --dayui-color-on-secondary: 51, 45, 65;
+    --dayui-color-secondary-container: 74, 68, 88;
+    --dayui-color-on-secondary-container: 232, 222, 248;
+    --dayui-color-tertiary: 239, 184, 200;
+    --dayui-color-on-tertiary: 73, 37, 50;
+    --dayui-color-tertiary-container: 99, 59, 72;
+    --dayui-color-on-tertiary-container: 255, 216, 228;
+    --dayui-color-error: 242, 184, 181;
+    --dayui-color-on-error: 96, 20, 16;
+    --dayui-color-error-container: 140, 29, 24;
+    --dayui-color-on-error-container: 249, 222, 220;
+    --dayui-color-background: 20, 18, 24;
+    --dayui-color-on-background: 230, 224, 233;
+    --dayui-color-surface: 20, 18, 24;
+    --dayui-color-on-surface: 230, 224, 233;
+    --dayui-color-surface-variant: 73, 69, 79;
+    --dayui-color-on-surface-variant: 202, 196, 208;
+    --dayui-color-outline: 147, 143, 153;
+    --dayui-color-outline-variant: 73, 69, 79;
+    --dayui-color-shadow: 0, 0, 0;
+    --dayui-color-scrim: 0, 0, 0;
+    --dayui-color-inverse-surface: 230, 224, 233;
+    --dayui-color-inverse-on-surface: 50, 47, 53;
+    --dayui-color-inverse-primary: 103, 80, 164;
+    --dayui-color-primary-fixed: 234, 221, 255;
+    --dayui-color-on-primary-fixed: 33, 0, 93;
+    --dayui-color-primary-fixed-dim: 208, 188, 255;
+    --dayui-color-on-primary-fixed-variant: 79, 55, 139;
+    --dayui-color-secondary-fixed: 232, 222, 248;
+    --dayui-color-on-secondary-fixed: 29, 25, 43;
+    --dayui-color-secondary-fixed-dim: 204, 194, 220;
+    --dayui-color-on-secondary-fixed-variant: 74, 68, 88;
+    --dayui-color-tertiary-fixed: 255, 216, 228;
+    --dayui-color-on-tertiary-fixed: 49, 17, 29;
+    --dayui-color-tertiary-fixed-dim: 239, 184, 200;
+    --dayui-color-on-tertiary-fixed-variant: 99, 59, 72;
+    --dayui-color-surface-dim: 20, 18, 24;
+    --dayui-color-surface-bright: 59, 56, 62;
+    --dayui-color-surface-container-lowest: 15, 13, 19;
+    --dayui-color-surface-container-low: 29, 27, 32;
+    --dayui-color-surface-container: 33, 31, 38;
+    --dayui-color-surface-container-high: 43, 41, 48;
+    --dayui-color-surface-container-highest: 54, 52, 59;
+}
+
+:root {
+    --dayui-color-primary: 101, 85, 143;
+    --dayui-color-surface-tint: 103, 80, 164;
+    --dayui-color-on-primary: 255, 255, 255;
+    --dayui-color-primary-container: 234, 221, 255;
+    --dayui-color-on-primary-container: 33, 0, 93;
+    --dayui-color-secondary: 98, 91, 113;
+    --dayui-color-on-secondary: 255, 255, 255;
+    --dayui-color-secondary-container: 232, 222, 248;
+    --dayui-color-on-secondary-container: 29, 25, 43;
+    --dayui-color-tertiary: 125, 82, 96;
+    --dayui-color-on-tertiary: 255, 255, 255;
+    --dayui-color-tertiary-container: 255, 216, 228;
+    --dayui-color-on-tertiary-container: 49, 17, 29;
+    --dayui-color-error: 179, 38, 30;
+    --dayui-color-on-error: 255, 255, 255;
+    --dayui-color-error-container: 249, 222, 220;
+    --dayui-color-on-error-container: 65, 14, 11;
+    --dayui-color-background: 254, 247, 255;
+    --dayui-color-on-background: 29, 27, 32;
+    --dayui-color-surface: 254, 247, 255;
+    --dayui-color-on-surface: 29, 27, 32;
+    --dayui-color-surface-variant: 231, 224, 236;
+    --dayui-color-on-surface-variant: 73, 69, 79;
+    --dayui-color-outline: 121, 116, 126;
+    --dayui-color-outline-variant: 202, 196, 208;
+    --dayui-color-shadow: 0, 0, 0;
+    --dayui-color-scrim: 0, 0, 0;
+    --dayui-color-inverse-surface: 50, 47, 53;
+    --dayui-color-inverse-on-surface: 245, 239, 247;
+    --dayui-color-inverse-primary: 208, 188, 255;
+    --dayui-color-primary-fixed: 234, 221, 255;
+    --dayui-color-on-primary-fixed: 33, 0, 93;
+    --dayui-color-primary-fixed-dim: 208, 188, 255;
+    --dayui-color-on-primary-fixed-variant: 79, 55, 139;
+    --dayui-color-secondary-fixed: 232, 222, 248;
+    --dayui-color-on-secondary-fixed: 29, 25, 43;
+    --dayui-color-secondary-fixed-dim: 204, 194, 220;
+    --dayui-color-on-secondary-fixed-variant: 74, 68, 88;
+    --dayui-color-tertiary-fixed: 255, 216, 228;
+    --dayui-color-on-tertiary-fixed: 49, 17, 29;
+    --dayui-color-tertiary-fixed-dim: 239, 184, 200;
+    --dayui-color-on-tertiary-fixed-variant: 99, 59, 72;
+    --dayui-color-surface-dim: 222, 216, 225;
+    --dayui-color-surface-bright: 254, 247, 255;
+    --dayui-color-surface-container-lowest: 255, 255, 255;
+    --dayui-color-surface-container-low: 247, 242, 250;
+    --dayui-color-surface-container: 243, 237, 247;
+    --dayui-color-surface-container-high: 236, 230, 240;
+    --dayui-color-surface-container-highest: 230, 224, 233;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --dayui-color-primary: 208, 188, 254;
+        --dayui-color-surface-tint: 208, 188, 255;
+        --dayui-color-on-primary: 56, 30, 114;
+        --dayui-color-primary-container: 79, 55, 139;
+        --dayui-color-on-primary-container: 234, 221, 255;
+        --dayui-color-secondary: 204, 194, 220;
+        --dayui-color-on-secondary: 51, 45, 65;
+        --dayui-color-secondary-container: 74, 68, 88;
+        --dayui-color-on-secondary-container: 232, 222, 248;
+        --dayui-color-tertiary: 239, 184, 200;
+        --dayui-color-on-tertiary: 73, 37, 50;
+        --dayui-color-tertiary-container: 99, 59, 72;
+        --dayui-color-on-tertiary-container: 255, 216, 228;
+        --dayui-color-error: 242, 184, 181;
+        --dayui-color-on-error: 96, 20, 16;
+        --dayui-color-error-container: 140, 29, 24;
+        --dayui-color-on-error-container: 249, 222, 220;
+        --dayui-color-background: 20, 18, 24;
+        --dayui-color-on-background: 230, 224, 233;
+        --dayui-color-surface: 20, 18, 24;
+        --dayui-color-on-surface: 230, 224, 233;
+        --dayui-color-surface-variant: 73, 69, 79;
+        --dayui-color-on-surface-variant: 202, 196, 208;
+        --dayui-color-outline: 147, 143, 153;
+        --dayui-color-outline-variant: 73, 69, 79;
+        --dayui-color-shadow: 0, 0, 0;
+        --dayui-color-scrim: 0, 0, 0;
+        --dayui-color-inverse-surface: 230, 224, 233;
+        --dayui-color-inverse-on-surface: 50, 47, 53;
+        --dayui-color-inverse-primary: 103, 80, 164;
+        --dayui-color-primary-fixed: 234, 221, 255;
+        --dayui-color-on-primary-fixed: 33, 0, 93;
+        --dayui-color-primary-fixed-dim: 208, 188, 255;
+        --dayui-color-on-primary-fixed-variant: 79, 55, 139;
+        --dayui-color-secondary-fixed: 232, 222, 248;
+        --dayui-color-on-secondary-fixed: 29, 25, 43;
+        --dayui-color-secondary-fixed-dim: 204, 194, 220;
+        --dayui-color-on-secondary-fixed-variant: 74, 68, 88;
+        --dayui-color-tertiary-fixed: 255, 216, 228;
+        --dayui-color-on-tertiary-fixed: 49, 17, 29;
+        --dayui-color-tertiary-fixed-dim: 239, 184, 200;
+        --dayui-color-on-tertiary-fixed-variant: 99, 59, 72;
+        --dayui-color-surface-dim: 20, 18, 24;
+        --dayui-color-surface-bright: 59, 56, 62;
+        --dayui-color-surface-container-lowest: 15, 13, 19;
+        --dayui-color-surface-container-low: 29, 27, 32;
+        --dayui-color-surface-container: 33, 31, 38;
+        --dayui-color-surface-container-high: 43, 41, 48;
+        --dayui-color-surface-container-highest: 54, 52, 59;
+    }
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(var(--dayui-color-on-background));
+    background: rgb(var(--dayui-color-background));
+
+    & > * {
+        color: rgb(var(--dayui-color-on-background));
+    }
+}
+
+
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 100 700;
+    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v215/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsLjBuVY.woff2) format('woff2');
+}
+
+day-icon::part(icon),
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+day-button-group :not(:first-child)::part(button) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+day-button-group :not(:last-child)::part(button) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
