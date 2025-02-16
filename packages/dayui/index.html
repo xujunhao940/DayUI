@@ -46,6 +46,21 @@
     </day-button-group>
 </div>
 <div>
+    <h1>FAB</h1>
+    <day-fab>
+        <day-icon>add</day-icon>
+    </day-fab>
+    <day-fab variant="outlined">
+        <day-icon>add</day-icon>
+    </day-fab>
+    <day-fab variant="text">
+        <day-icon>add</day-icon>
+    </day-fab>
+    <day-fab disabled>
+        <day-icon>add</day-icon>
+    </day-fab>
+</div>
+<div>
     <h1>Menu</h1>
     <day-menu>
         <day-menu-item>
@@ -199,6 +214,172 @@
         <day-radio value="male">Male</day-radio>
         <day-radio value="ratherNotSay">Rather not say</day-radio>
     </day-radio-group>
+</div>
+<div>
+    <h1>Divider</h1>
+    <day-divider></day-divider>
+</div>
+<div>
+    <h1>Card</h1>
+    <day-card>
+        <day-card-part slot="header">
+            <h2 style="margin: 0">Card</h2>
+        </day-card-part>
+        <day-card-part slot="body">
+            <p style="margin: 0">Body</p>
+        </day-card-part>
+        <div slot="footer">
+            <day-card-button>Action</day-card-button>
+        </div>
+    </day-card>
+    <day-card variant="outlined">
+        <day-card-part slot="header">
+            <h2 style="margin: 0">Card</h2>
+        </day-card-part>
+        <day-card-part slot="body">
+            <p style="margin: 0">Body</p>
+        </day-card-part>
+        <div slot="footer">
+            <day-card-button>Action</day-card-button>
+        </div>
+    </day-card>
+    <day-card variant="text">
+        <day-card-part slot="header">
+            <h2 style="margin: 0">Card</h2>
+        </day-card-part>
+        <day-card-part slot="body">
+            <p style="margin: 0">Body</p>
+        </day-card-part>
+        <div slot="footer">
+            <day-card-button>Action</day-card-button>
+            <day-card-button variant="text">Action</day-card-button>
+            <day-card-button variant="outlined">Action</day-card-button>
+        </div>
+    </day-card>
+</div>
+<div>
+    <h1>Avatar</h1>
+    <day-avatar>
+        <img src="https://avatars.githubusercontent.com/u/103154953?v=4" alt="avatar">
+    </day-avatar>
+    <p style="overflow-x: scroll">&lt;img src="https://avatars.githubusercontent.com/u/103154953?v=4" alt="avatar"&gt;</p>
+    <day-avatar>
+        <day-avatar-text text="Junhao Xu"></day-avatar-text>
+    </day-avatar>
+    <p>Junhao Xu</p>
+    <day-avatar>
+        <day-avatar-text text="Abcde Fghij Klmno"></day-avatar-text>
+    </day-avatar>
+    <p>Abcde Fghij Klmno</p>
+    <day-avatar>
+        <day-avatar-text text="abcde"></day-avatar-text>
+    </day-avatar>
+    <p>abcde</p>
+</div>
+<div>
+    <h1>Chip</h1>
+    <day-chip>
+        <span>Home</span>
+    </day-chip>
+    <day-chip variant="outlined">
+        <span>Home</span>
+    </day-chip>
+    <day-chip>
+        <day-icon slot="startEl">home</day-icon>
+        <span>Home</span>
+        <span slot="endEl">⌘H</span>
+    </day-chip>
+</div>
+<div style="display: flex;flex-direction: column;gap: 1rem">
+    <h1 style="margin-bottom: 0">Tabs</h1>
+    <day-tabs>
+        <day-tab value="home">
+            <day-icon slot="icon">home</day-icon>
+            <span>Home</span>
+        </day-tab>
+        <day-tab value="lib">
+            <day-icon slot="icon">library_music</day-icon>
+            <span>Library</span>
+        </day-tab>
+        <day-tab value="search">
+            <day-icon slot="icon">search</day-icon>
+            <span>Search</span>
+        </day-tab>
+        <day-tab-panel value="home">
+            <span>Home</span>
+        </day-tab-panel>
+        <day-tab-panel value="lib">
+            <span>Library</span>
+        </day-tab-panel>
+        <day-tab-panel value="search">
+            <span>Search</span>
+        </day-tab-panel>
+    </day-tabs>
+    <day-tabs>
+        <day-tab value="home" inline>
+            <day-icon slot="icon">home</day-icon>
+            <span>Home</span>
+        </day-tab>
+        <day-tab value="lib" inline>
+            <day-icon slot="icon">library_music</day-icon>
+            <span>Library</span>
+        </day-tab>
+        <day-tab value="search" inline disabled>
+            <day-icon slot="icon">search</day-icon>
+            <span>Search</span>
+        </day-tab>
+        <day-tab-panel value="home">
+            <span>Home</span>
+        </day-tab-panel>
+        <day-tab-panel value="lib">
+            <span>Library</span>
+        </day-tab-panel>
+        <day-tab-panel value="search">
+            <span>Search</span>
+        </day-tab-panel>
+    </day-tabs>
+    <day-tabs style="width: 20rem">
+        <day-tab value="0">000</day-tab>
+        <day-tab value="1">111</day-tab>
+        <day-tab value="2">222</day-tab>
+        <day-tab value="3">333</day-tab>
+        <day-tab value="4">444</day-tab>
+        <day-tab value="5">555</day-tab>
+        <day-tab value="6">666</day-tab>
+        <day-tab value="7">777</day-tab>
+        <day-tab value="8">888</day-tab>
+        <day-tab value="9">999</day-tab>
+    </day-tabs>
+</div>
+<div>
+    <h1>List</h1>
+    <day-list>
+        <day-list-item headline="Junhao Xu">
+            <day-avatar slot="startEl">
+                <day-avatar-text text="Junhao Xu"></day-avatar-text>
+            </day-avatar>
+            <day-checkbox slot="endEl"></day-checkbox>
+        </day-list-item>
+        <day-list-item headline="Junhao Xu"
+                       description="DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI DayUI">
+            <day-avatar slot="startEl">
+                <day-avatar-text text="Junhao Xu"></day-avatar-text>
+            </day-avatar>
+        </day-list-item>
+        <day-list-item headline="Junhao Xu" description="DayUI">
+            <day-avatar slot="startEl">
+                <day-avatar-text text="Junhao Xu"></day-avatar-text>
+            </day-avatar>
+            <day-checkbox slot="endEl"></day-checkbox>
+        </day-list-item>
+
+    </day-list>
+</div>
+<div>
+    <h1>Slider</h1>
+    <day-slider></day-slider>
+    <day-slider min="10" max="20" step="2"></day-slider>
+    <day-slider min="2000" max="3000" value="2778" disabled></day-slider>
 </div>
 </body>
 </html>

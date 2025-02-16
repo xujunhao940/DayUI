@@ -2,14 +2,22 @@ import {css} from "lit"
 
 
 export const styles = css`
+    :host {
+        display: block;
+        width: fit-content;
+    }
+
     .day-menu-container {
+        width: 100%;
         position: relative;
     }
 
     .day-menu {
+        min-width: 12rem;
+        box-sizing: border-box;
         z-index: 99;
         transition: 200ms;
-        width: 200px;
+        width: 100%;
         padding: 4px;
         border-radius: 16px;
         -webkit-backdrop-filter: blur(12px);

@@ -252,3 +252,8 @@ day-button-group :not(:last-child)::part(button) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
+
+day-card div[slot="footer"] :last-child::part(button) {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}

@@ -2,7 +2,12 @@ import {css} from "lit"
 
 
 export const styles = css`
+    :host {
+        display: flex;
+    }
+
     .day-input-container {
+        width: 100%;
         position: relative;
         border-radius: 16px;
         transition: .2s;

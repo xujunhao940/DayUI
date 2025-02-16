@@ -61,7 +61,12 @@ export class ButtonGroup extends LitElement {
     }
 
     static styles = css`
-        :host div {
+        :host {
+            height: 40px;
+        }
+
+        div {
+            width: 100%;
             display: inline-flex;
         }
     `

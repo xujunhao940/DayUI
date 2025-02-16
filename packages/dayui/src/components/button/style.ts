@@ -8,6 +8,7 @@ export const styles = css`
     }
 
     .button {
+        width: 100%;
         cursor: pointer;
         user-select: none;
         display: flex;
@@ -22,6 +23,8 @@ export const styles = css`
         font-size: 12px;
         -webkit-tap-highlight-color: transparent;
         user-select: none;
+        display: flex;
+        justify-content: space-around;
 
         &:focus-visible {
             outline: 2px solid rgba(var(--dayui-color-primary), .8);
