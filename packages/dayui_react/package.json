@@ -1,9 +1,9 @@
 {
   "name": "dayui_react",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "packageManager": "yarn@4.1.1",
   "dependencies": {
-    "@babel/runtime": "^7.26.0",
-    "@lit/react": "^1.0.6"
+    "@lit/react": "^1.0.6",
+    "@xujunhao2010/dayui": "1.1.0"
   }
 }

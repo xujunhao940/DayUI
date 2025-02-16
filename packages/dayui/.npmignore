@@ -3,5 +3,4 @@ node_modules
 .yarn
 .idea
 .DS_Store
-.gitignore
 yarn.lock

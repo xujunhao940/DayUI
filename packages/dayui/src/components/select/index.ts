@@ -31,9 +31,14 @@ export class Select extends LitElement {
 
     render() {
         return html`
+            <style>
+                :host {
+                    display: block;
+                }
+            </style>
             <div class="day-select-container">
                 <day-dropdown ?disabled=${this.disabled}>
-                    <day-input label=${this.label} value=${this.value} slot="trigger" tabIndex="0" readonly
+                    <day-input label=${this.label} value=${this.value} slot="trigger" readonly
                                @focus=${(e: { target: { click: () => void; }; }) => {
                                    e.target.click()
                                }} ?disabled=${this.disabled} name=${this.name}></day-input>

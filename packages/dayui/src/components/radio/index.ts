@@ -109,6 +109,7 @@ export class Radio extends LitElement {
             } else if (e.key === 'Enter' || e.key === ' ') {
                 // @ts-ignore
                 this.parentElement.value = this.value
+                e.preventDefault()
             }
         })
     }
